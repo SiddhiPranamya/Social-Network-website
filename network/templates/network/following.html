@@ -1,0 +1,14 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+{% if posts%}
+{% for post in posts %} 
+    <div class="border border-secondary rounded p-3 mt-2">
+        <h4>{{post.user}}</h4>
+        {{post.post}}<br>
+        {{post.timestamp}}<br>
+    </div>
+{% endfor %}
+{% endif %}
+
+{% endblock %}
